@@ -132,12 +132,61 @@ In our regex featured in this tutorial: /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.
 Character Classes and Character Sets:
 The featured email regex uses two primary character classes: \d and .. Character sets are defined within square brackets, such as [a-z], [0-9], and [.-]. These sets represent multiple characters, allowing a single character match from the specified range.
 
+Negated Character Classes:
+The negated character classes are not something which are present throughout this email regex. However, they are denoted by a caret (^) symbol inside square brackets, for example, [^a-z]. Remember, for future use this negation would match any character that is not a lowercase letter from a to z.
+
+Metacharacters Inside Character Classes:
+The metacharacters are characters with special meanings in regex, such as the dot (.). Inside character classes, some metacharacters lose their special meaning and are treated as literals. In our featured email regex, the hyphen (-) and the dot (.) are metacharacters placed inside character classes [a-z0-9_.-] and [\da-z.-]. The dot is escaped with a backslash (.), and the hyphen is used as a literal character without escaping, as it is placed at the beginning or end of the character set.
+
+Repeating Character Classes:
+The email regex uses the + and {2,6} quantifiers to indicate repeating character classes as discussed before. The plus sign (+) matches one or more occurrences of the preceding character class or set, as in [a-z0-9_.-]+ and [\da-z.-]+. Therefore the curly braces ({2,6}) define a specific range of repetitions for the preceding character class or set, as in [a-z.]{2,6}, which matches 2 to 6 occurrences of lowercase letters or the literal period (dot) characters found.
+
+Thereby, the combination of these elements among our featured regex allows the email to accurately be sources and validated to ensure it matches email addresses using a clear and organized representation of the compulsory character sets.
+
 ### The OR Operator
+
+The OR operator, also known as alternation, is a crucial concept in regular expressions for defining alternative patterns. It's represented by the | symbol, allowing the regex to match either one pattern or another. Among our regex featured in this tutorial: ^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/, there is no OR-Operator that exists nor explicitly used. Though it is not used, it is important to note for future use, as it is essential to understand its function for more complex patterns to come in your academic and professional career.
+
+OR-Operator Usage Purpose:
+Used to specify alternative patterns among regex, enhancing its flexibility and matching capabilities.
+Syntax: | used to separate alternative patterns in the regex.
+E.g: The regex ^(Flying Birds| Non-Flying Birds)$ matches either the string Flying Birds or Non-Flying Birds, but cannot match both or other strings.
+Crucial for functioning with regular expressions, the OR operator allows the creation of flexible and adaptable patterns. Although it is not explicitly used in our featured email regex, the OR-Operator remains a key concept for those learning and utilizing regular expressions in various applications among their studies.
 
 ### Flags
 
+Flags are modifiers which affect the behavior of regular expressions(regex) by enabling or disabling certain features and are appended to the end of the regex pattern, outside the slashes /.
+
+Though our regex featured in this tutorial: /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/ does not use flags, it's important to understand its purpose in regex patterns. Flags are used to control case sensitivity, multiline matching, and global matching. I would advise for any new-comer to learn more about flags, so you are able to enhance your regex knowledge.
+
+Flag tpes you may find in future use:
+g (global): Enables global matching, regex engine will find all matches in the input string.
+i (ignore case): Enables the regex case-insensitive, matching both uppercase and lowercase characters.
+m (multiline): Enables start (^) and end ($) anchors to match at the beginning and end of each line in a multiline string, rather than just the beginning and end of the entire string.
+s (dotAll): Enables dot . metacharacter match any character, including newline characters.
+u (unicode): Treats input string as Unicode, enables correct processes of Unicode surrogate pairs.
+y (sticky): Mandates regex engine ro iniate searching for a match at the exact position specified by the lastIndex property.
+We're able to conclude this section by saying are essential in modifying the behavioir of patterns found among regex. Although it is not utilized in our regex featured in this tutorial /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/, understanding the use of flags will enhance your use regex patterns to accommodate varrying requirements and situations.
+
 ### Character Escapes
+
+Character escapes are an essential aspect of regex, allowing for accurate pattern matching by suppressing the special meaning of metacharacters and representing characters that cannot be directly typed. In our regex featured in this tutorial /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/ we can identify the use of character escapes and their purposes:
+
+Backslash (\):
+The backslash is a common escape character used to treat metacharacters as literals in regex. Throughout our featured regex, the dot (.) is escaped with a backslash, exactly like this \.. Thus ensuring the dot is treated as a literal period instead of a metaphorical wildcard.
+
+Metacharacters:
+Metacharacters have siginifcant meaning in regex, such as the dot (.), plus sign (+), and caret (^). When placed among character classes, they often lose their special meanings and behave as though they are regular characters... In our featured email regex, the hyphen (-) is used as a literal character inside the character classes [a-z0-9_\.-] and [\da-z\.-] without needing to be escaped.
+
+Escape sequences:
+Escape sequences, are characters that can not be directly typed or represented in a string, so escape sequences are the implemented, then used. These sequences start with a backslash (\) followed by a letter or combination of letters. In the email regex, \d is an escape sequence that represents any digit from 0 to 9, serving as a shorthand for the use of [0-9].
+
+Character escapes serve a crucial role for ensuring accurately matching text patterns by interpreting special characters as literals. They help suppress the special meanings of metacharacters and represent characters that can't be directly typed. Thereby, ensuring the proper functioning of regex expressions that contribute to reliable email validation.
 
 ## Author
 
-A short section about the author with a link to the author's GitHub profile (replace with your information and a link to your profile)
+Follow me on Github at JacksonByrd7.  Until we meet again.
+
+Deployed link: 
+
+Repository link: 
